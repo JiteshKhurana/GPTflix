@@ -31,7 +31,7 @@ const Login = () => {
           displayName: name.current.value, photoURL: USER_ICON
         }).then(() => {
           const {uid,email,displayName,photoURL} = user;
-          dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
+          (addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
         }).catch((error) => {
           setErrMessage(error.message);
         });
