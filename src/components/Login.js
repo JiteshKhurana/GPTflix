@@ -5,10 +5,13 @@ import { checkValidData } from '../utils/validate'
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import {auth} from '../utils/firebase.js'
 import {useNavigate} from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { addUser } from '../utils/userSlice.js';
 
 
 const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [isSignIn,setIsSignIn] = useState(true);
   const [errMessage,setErrMessage] = useState(null);
   const name = useRef(null);
@@ -28,6 +31,8 @@ const Login = () => {
         updateProfile(auth.currentUser, {
           displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/95995545?v=4"
         }).then(() => {
+          const {uid,email,displayName,photoURL} = user;
+          dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
           navigate("/browse");
         }).catch((error) => {
           setErrMessage(error.message);
