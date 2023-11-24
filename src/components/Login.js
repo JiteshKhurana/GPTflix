@@ -4,13 +4,12 @@ import {useState,useRef} from 'react'
 import { checkValidData } from '../utils/validate'
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import {auth} from '../utils/firebase.js'
-import {useNavigate} from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice.js';
+import { BG, USER_ICON } from '../utils/constants.js';
 
 
 const Login = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignIn,setIsSignIn] = useState(true);
   const [errMessage,setErrMessage] = useState(null);
@@ -29,11 +28,10 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         updateProfile(auth.currentUser, {
-          displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/95995545?v=4"
+          displayName: name.current.value, photoURL: USER_ICON
         }).then(() => {
           const {uid,email,displayName,photoURL} = user;
           dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
-          navigate("/browse");
         }).catch((error) => {
           setErrMessage(error.message);
         });
@@ -49,7 +47,6 @@ const Login = () => {
       signInWithEmailAndPassword(auth, email.current.value,password.current.value)
       .then((userCredential) => {
         const user = userCredential.user;
-        navigate("/browse");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -63,9 +60,9 @@ const Login = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img src='https://assets.nflxext.com/ffe/siteui/vlv3/a09bb938-2d90-42ae-986e-5a3e4abf9e77/8eb1e781-3494-4aa4-9405-268ca6473e4c/IN-en-20231113-popsignuptwoweeks-perspective_alpha_website_large.jpg' alt='bg-img'/>
+        <img src={BG} alt='bg-img'/>
       </div>
-      <form onSubmit={(e)=>e.preventDefault()} className=' w-3/12 h-3/5 absolute bg-black my-36 p-10 mx-auto left-0 right-0 bg-opacity-82 rounded-lg text-white '>
+      <form onSubmit={(e)=>e.preventDefault()} className=' w-3/12 h-3/5 absolute bg-black my-36 p-10 mx-auto left-0 right-0 bg-opacity-81 rounded-lg text-white '>
         <h1 className='text-3xl py-4 m-2 font-bold'>{isSignIn?"Sign In":"Sign Up"}</h1>
         {!isSignIn && <input ref={name} type='text' placeholder='Full Name' className='p-3 my-2 w-full rounded-md bg-gray-700'></input>}
         <input ref={email} type='email' autoComplete="username" placeholder='Email Address' className='p-3 my-2 w-full rounded-md bg-gray-700'></input>

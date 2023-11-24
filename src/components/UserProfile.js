@@ -9,7 +9,6 @@ const UserProfile = () => {
     const user = useSelector(store=>store.user);
     const handleSignOut=()=>{
         signOut(auth).then(() => {
-            navigate("/");
         }).catch((error) => {
             navigate("/error");
         });
