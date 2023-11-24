@@ -4,8 +4,11 @@ import {useState,useRef} from 'react'
 import { checkValidData } from '../utils/validate'
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from '../utils/firebase.js'
+import {useNavigate} from 'react-router-dom'
+
 
 const Login = () => {
+  const navigate = useNavigate();
   const [isSignIn,setIsSignIn] = useState(true);
   const [errMessage,setErrMessage] = useState(null);
   const name = useRef(null);
@@ -15,18 +18,14 @@ const Login = () => {
     setIsSignIn(!isSignIn);
   }
   const handleButtonClick=()=>{
-    // Validate The form data
     const message=checkValidData(name?.current?.value,email.current.value,password.current.value);
     setErrMessage(message);
     if(message) return;
-    // Signin/sign up logic
     if(!isSignIn){
-      // Sign Up
       createUserWithEmailAndPassword(auth,email.current.value,password.current.value)
       .then((userCredential) => {
-        // Signed up 
         const user = userCredential.user;
-        console.log(user);
+        navigate("/browse");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -37,9 +36,8 @@ const Login = () => {
     else{
       signInWithEmailAndPassword(auth, email.current.value,password.current.value)
       .then((userCredential) => {
-        // Signed in 
         const user = userCredential.user;
-        console.log(user);
+        navigate("/browse");
       })
       .catch((error) => {
         const errorCode = error.code;
