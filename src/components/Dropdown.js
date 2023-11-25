@@ -15,10 +15,10 @@ const Dropdown = () => {
     }
     return (
         <div className="absolute top-24 bg-white rounded-lg w-44 py-2 opacity-85">
-            <h1 className='text-black px-4 py-3 text-sm'>{user.displayName}</h1>
+            <h1 className='text-black px-4 py-2 text-sm'>{user.displayName}</h1>
             <ul className="py-2 text-sm">
                 <li>
-                    <h1 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</h1>
+                    <h1 className="block px-4 py-2 ">Dashboard</h1>
                 </li>
             </ul>
             <button onClick={handleSignOut} className='block px-4 py-2 text-sm text-black rounded-md'>Sign Out</button>
