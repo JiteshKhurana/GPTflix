@@ -14,7 +14,7 @@ const UserProfile = () => {
         });
     }
   return (
-    <div className='bg-gray-400 p-5 rounded-md absolute top-15 right-5 w-30'>
+    <div className='bg-white p-5 rounded-md absolute top-15 right-5 w-30 opacity-70'>
         <h1 className='text-black'>Hello {user.displayName}</h1>
         <button onClick={handleSignOut} className='p-1 m-2 h-10 text-white bg-red-600 rounded-md'>Sign Out</button>
     </div>
