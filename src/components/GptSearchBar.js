@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import lang from '../utils/languageConstants';
 import openai from '../utils/openai';
-import { ShowGptSearchError } from '../utils/gptSlice';
+import { ShowGptSearchError, addGPTMovieResult } from '../utils/gptSlice';
 import { APP_OPTIONS } from '../utils/constants';
 
 const GptSearchBar = () => {
@@ -26,7 +26,6 @@ const GptSearchBar = () => {
             model: 'gpt-3.5-turbo',
         });
         const gptMovies = gptResults.choices?.[0].message?.content.split(',');
-        console.log(gptMovies);
         if(gptMovies==="[]"){
             dispatch(ShowGptSearchError("The input provided doesn't match any recognizable movie titles or references. Please provide more details or clarify your preferences for better movie recommendations."))
             return;
@@ -35,8 +34,7 @@ const GptSearchBar = () => {
             dispatch(ShowGptSearchError(""))
             const promiseArray = gptMovies.map((movie)=>searchMovieTMDB(movie.trim()));
             const tmdbResults = await Promise.all(promiseArray);
-            console.log(tmdbResults);
-            
+            dispatch(addGPTMovieResult(tmdbResults));
         } 
 
     };
