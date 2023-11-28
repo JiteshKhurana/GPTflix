@@ -58,7 +58,7 @@ const Login = () => {
   return (
     <div>
       <Header/>
-      <div className='absolute'>
+      <div className='fixed'>
         <img src={BG} alt='bg-img'/>
       </div>
       <form onSubmit={(e)=>e.preventDefault()} className=' w-3/12 h-3/5 absolute bg-black my-36 p-10 mx-auto left-0 right-0 bg-opacity-81 rounded-lg text-white '>
