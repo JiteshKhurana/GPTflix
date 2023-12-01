@@ -19,15 +19,17 @@ const GptSearchBar = () => {
     }
 
     const handleGptSearchClick=async()=>{
-        const gptQuery="Act as a Movie Recommendation system and suggest some movies for the query : " +searchtext.current.value+".Only give me names of 5 movies, comma separated like the example result given ahead.Example Result: Gadar,Sholay,Don,Golmaal,Kuch Kuch Hota Hai and if you are not able to find it return an empty array"
+        const gptQuery="Act as a Movie Recommendation system and suggest some movies for the query : " +searchtext.current.value+".Only give me names of 5 movies, comma separated like the example result given ahead.Example Result: Gadar,Sholay,Don,Golmaal,Kuch Kuch Hota Hai and if you are not able to find any result just return codeRed and nothing else Example Result:'codeRed'"
 
         const gptResults = await openai.chat.completions.create({
             messages: [{ role: 'user', content: gptQuery}],
             model: 'gpt-3.5-turbo',
         });
+        console.log(gptResults);
         const gptMovies = gptResults.choices?.[0].message?.content.split(',');
-        if(gptMovies==="[]"){
+        if(gptResults.choices?.[0].message?.content==="codeRed"){
             dispatch(ShowGptSearchError("The input provided doesn't match any recognizable movie titles or references. Please provide more details or clarify your preferences for better movie recommendations."))
+            dispatch(addGPTMovieResult(null));
             return;
         }
         else{
