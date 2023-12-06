@@ -7,8 +7,6 @@ const MovieCard = ({movie}) => {
       <img className='rounded-xl' alt='Movie Card' src={IMG_CDN_URL+movie.poster_path}/>
       <h2 className='text-white text-xl mt-2'>{movie.title}</h2>
     </div>
-    
-        
   )
 }
 

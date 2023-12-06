@@ -4,9 +4,9 @@ import VideoTitle from './VideoTitle'
 import { useSelector } from 'react-redux'
 
 const MainContainer = () => {
-    const movie = useSelector(state=>state.movies?.nowPlayingMovies);
+    const movie = useSelector(state=>state.movies?.TrendingMovies);
     if(!movie) return;
-    const mainMovie = movie[2];
+    const mainMovie = movie[1];
     const {original_title,overview,id} = mainMovie;
     return (
         <div>
