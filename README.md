@@ -18,11 +18,10 @@ Welcome to a smarter, more engaging way to explore and enjoy your favorite conte
 
 ### :camera: Screenshots
 
-<div align="center"> <a href="https://gptflix.vercel.app/"><img src="https://i.ibb.co/34zDphd/Screenshot-2023-12-06-at-6-47-21-PM.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://gptflix.vercel.app/"><img src="https://i.ibb.co/7yK8441/Screenshot-2023-12-06-at-6-48-05-PM.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://gptflix.vercel.app/"><img src="https://i.ibb.co/q71DS3X/Screenshot-2023-12-06-at-6-48-49-PM.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://gptflix.vercel.app/"><img src="https://i.ibb.co/pKR0jBs/Screenshot-2023-12-06-at-6-57-41-PM.png" alt='image' width='800'/></a> </div>
-<div >
+[![JIcM5AP.md.png](https://iili.io/JIcM5AP.md.png)](https://freeimage.host/i/JIcM5AP)
+[![JIcMuSV.md.png](https://iili.io/JIcMuSV.md.png)](https://freeimage.host/i/JIcMuSV)
+[![JIcMRHB.md.png](https://iili.io/JIcMRHB.md.png)](https://freeimage.host/i/JIcMRHB)
+[![JIcMTcQ.md.png](https://iili.io/JIcMTcQ.md.png)](https://freeimage.host/i/JIcMTcQ)
 
 ### :key: Environment Variables
 
