@@ -18,10 +18,10 @@ Welcome to a smarter, more engaging way to explore and enjoy your favorite conte
 
 ### :camera: Screenshots
 
-[![JIcM5AP.md.png](https://iili.io/JIcM5AP.md.png)](https://freeimage.host/i/JIcM5AP)
-[![JIcMuSV.md.png](https://iili.io/JIcMuSV.md.png)](https://freeimage.host/i/JIcMuSV)
-[![JIcMRHB.md.png](https://iili.io/JIcMRHB.md.png)](https://freeimage.host/i/JIcMRHB)
-[![JIcMTcQ.md.png](https://iili.io/JIcMTcQ.md.png)](https://freeimage.host/i/JIcMTcQ)
+<a href="https://freeimage.host/i/JIcM5AP"><img src="https://iili.io/JIcM5AP.png" alt="JIcM5AP.md.png" border="0"></a>
+<a href="https://freeimage.host/i/JIcMuSV"><img src="https://iili.io/JIcMuSV.png" alt="JIcMuSV.md.png" border="0"></a>
+<a href="https://freeimage.host/i/JIcMRHB"><img src="https://iili.io/JIcMRHB.png" alt="JIcMRHB.md.png" border="0"></a>
+<a href="https://freeimage.host/i/JIcMTcQ"><img src="https://iili.io/JIcMTcQ.png" alt="JIcMTcQ.md.png" border="0"></a>
 
 ### :key: Environment Variables
 
