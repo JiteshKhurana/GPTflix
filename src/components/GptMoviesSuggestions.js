@@ -7,7 +7,7 @@ const GptMoviesSuggestions = () => {
   // if(!movies) return <Shimmer/>;
   return (
     <div className='mt-28 mx-10'>
-      <MovieList title={"Recommended"} movies={movies}/>
+      <MovieList title={""} movies={movies}/>
     </div>
   )
 }

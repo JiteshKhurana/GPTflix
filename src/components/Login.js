@@ -4,13 +4,11 @@ import {useState,useRef} from 'react'
 import { checkValidData } from '../utils/validate'
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import {auth} from '../utils/firebase.js'
-import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice.js';
 import { BG, USER_ICON } from '../utils/constants.js';
 
 
 const Login = () => {
-  const dispatch = useDispatch();
   const [isSignIn,setIsSignIn] = useState(true);
   const [errMessage,setErrMessage] = useState(null);
   const name = useRef(null);

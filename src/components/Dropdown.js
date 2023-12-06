@@ -14,14 +14,9 @@ const Dropdown = () => {
         });
     }
     return (
-        <div className="absolute top-24 bg-white rounded-lg w-44 py-2 opacity-85">
+        <div className="absolute top-24 right-7 bg-white rounded-lg w-44 py-2 opacity-80">
             <h1 className='text-black px-4 py-2 text-sm'>{user.displayName}</h1>
-            <ul className="py-2 text-sm">
-                <li>
-                    <h1 className="block px-4 py-2 ">Dashboard</h1>
-                </li>
-            </ul>
-            <button onClick={handleSignOut} className='block px-4 py-2 text-sm text-black rounded-md'>Sign Out</button>
+            <button onClick={handleSignOut} className='block px-4 py-2 text-sm text-black rounded-md hover:text-red-500'>Sign Out</button>
         </div>
     );
 }

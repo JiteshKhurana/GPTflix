@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+<div align='center'>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>GPTflix</h1>
+<p>The GPTflix App revolutionizes the Netflix experience through cutting-edge AI technology. By harnessing the power of OpenAI's GPT-3.5 model, it offers a tailored content discovery journey, elevating the streaming experience for avid Netflix enthusiasts. This project caters to those who crave a more immersive and personalized approach to entertainment.
 
-## Available Scripts
+Welcome to a smarter, more engaging way to explore and enjoy your favorite content on Netflix.</p>
 
-In the project directory, you can run:
 
-### `npm start`
+<h4> <a href=https://gptflix.vercel.app/>View Demo</a></div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# :notebook_with_decorative_cover: Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [About the Project](#star2-about-the-project)
 
-### `npm test`
+- [Contact](#handshake-contact)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :star2: About the Project
 
-### `npm run build`
+### :camera: Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<div align="center"> <a href="https://gptflix.vercel.app/"><img src="https://i.ibb.co/34zDphd/Screenshot-2023-12-06-at-6-47-21-PM.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://gptflix.vercel.app/"><img src="https://i.ibb.co/7yK8441/Screenshot-2023-12-06-at-6-48-05-PM.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://gptflix.vercel.app/"><img src="https://i.ibb.co/q71DS3X/Screenshot-2023-12-06-at-6-48-49-PM.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://gptflix.vercel.app/"><img src="https://i.ibb.co/pKR0jBs/Screenshot-2023-12-06-at-6-57-41-PM.png" alt='image' width='800'/></a> </div>
+<div >
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### :key: Environment Variables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project, you will need to add the following environment variables to your .env file
 
-### `npm run eject`
+`VITE_OPENAPI_KEY`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`VITE_TMDB_KEY`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`VITE_FIRE_BASE_API_KEY`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## :toolbox: Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### :bangbang: Prerequisites
 
-## Learn More
+- Install Node Js in your computer<a href="https://nodejs.org/en"> Here</a>
+- Setup Firebase <a href="https://firebase.google.com/"> Here</a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Get you OpenAI Platform API key<a href="https://platform.openai.com/"> Here</a>
+- Get you TMDB API key<a href="https://developer.themoviedb.org/reference/intro/getting-started"> Here</a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### :running: Run Locally
 
-### Code Splitting
+Clone the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+https://github.com/JiteshKhurana/GPTflix
+```
 
-### Analyzing the Bundle Size
+Go to the project directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+cd netflix-gpt
+```
 
-### Making a Progressive Web App
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm i
+```
 
-### Advanced Configuration
+Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run dev
+```
 
-### Deployment
+### :triangular_flag_on_post: Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To deploy this project run
 
-### `npm run build` fails to minify
+```bash
+firebase deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## :handshake: Contact
+
+Jitesh Khurana - - jiteshkhurana59@gmail.com
+
+Project Link: [https://github.com/JiteshKhurana/GPTflix](https://github.com/JiteshKhurana/GPTflix)

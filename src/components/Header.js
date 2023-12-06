@@ -48,7 +48,7 @@ const Header = () => {
           {showGptSearch && <select className='h-12 text-md px-3 py-1 my-3 text-white bg-gray-500 rounded-md ' onChange={handleLangChange}>
                 {SUPPORTED_LANGUAGES.map((lang)=><option key={lang.id} value={lang.id} onClick={(e)=>console.log(e)}>{lang.name}</option>)}
           </select>}
-          <button onClick={handleGPTSearchClick} className='h-12 text-md px-2 py-1 m-3 text-white bg-blue-400 rounded-md hover:bg-opacity-80'>{showGptSearch?'HomePage':'GPT Search'}</button>
+          <button onClick={handleGPTSearchClick} className='h-12 text-md px-2 py-1 m-3 text-white bg-blue-400 rounded-md hover:bg-opacity-80'>{showGptSearch?'HomePage':'AI Search'}</button>
           <button onClick={()=>setShowDiv(!showdiv)}><img src={user?.photoURL} alt='user-icon' className='h-12 rounded-md'/></button>
           {showdiv && <Dropdown/>}
       </div>}
