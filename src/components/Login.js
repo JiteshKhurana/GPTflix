@@ -7,7 +7,6 @@ import {auth} from '../utils/firebase.js'
 import { addUser } from '../utils/userSlice.js';
 import { BG, USER_ICON } from '../utils/constants.js';
 
-
 const Login = () => {
   const [isSignIn,setIsSignIn] = useState(true);
   const [errMessage,setErrMessage] = useState(null);
@@ -35,7 +34,6 @@ const Login = () => {
         });
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         setErrMessage(errorMessage);
       });
